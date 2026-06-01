@@ -1,0 +1,9 @@
+parameter,sensitivity_range,rank,interpretation
+Membrane permeability scaling,0.07,1,Highest local influence on delivery-safety balance
+Initial cooling duration,0.065,2,Strong operational influence on thermal response
+Reservoir diffusivity D_res_ref,0.049,3,Moderate-high transport sensitivity
+PCM thickness,0.048,4,Strong thermal-design influence
+Hydrogel thickness,0.04,5,Moderate design sensitivity
+Effective clearance k_clr,0.036,6,Moderate exposure-profile sensitivity
+Daily wear time,0.031,7,Moderate operational sensitivity
+Activation energy E_D,0.028,8,Lower but non-negligible thermal-transport sensitivity

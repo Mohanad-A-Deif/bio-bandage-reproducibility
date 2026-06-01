@@ -1,0 +1,6 @@
+design,dose_mg_cm2,response_reduction_day14_pct,peak_temp_dev_C,rom_surrogate_pct,interpretation
+P1,0.92,66.8,0.34,78,Conservative low-dose design
+P2,1.03,69.9,0.47,81,Balanced low-risk design
+P3,1.11,72.9,0.61,86,Selected compromise design
+P4,1.23,74.6,0.83,87,Response-oriented design
+P5,1.36,76.1,1.09,88,Higher-response but less conservative design

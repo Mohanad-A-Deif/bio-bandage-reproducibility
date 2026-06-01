@@ -1,0 +1,5 @@
+dataset,computational_setting,main_outputs
+C1,Synthetic baseline simulations,temperature fields; concentration fields; absorption-side flux; cumulative delivered mass
+C2,DOE and mechanism scenarios,objective values; feasibility indicators; safety-window violations; comparative design rankings
+C3,Robustness and sensitivity simulations,parameter-sensitivity maps; robustness envelopes; uncertainty effects on design performance
+C4,PDE-constrained optimization,optimized layer thicknesses; cooling schedules; compression schedules; final objective values

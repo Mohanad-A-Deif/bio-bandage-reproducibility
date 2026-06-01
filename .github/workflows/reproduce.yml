@@ -1,0 +1,43 @@
+name: Reproduce outputs
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Regenerate synthetic data and figures
+        run: |
+          python src/bio_bandage_reproducible_study.py --all
+
+      - name: Verify expected outputs
+        run: |
+          test -f data/doe_runs.csv
+          test -f figures/fig1_permeation_temperature_response.png
+          test -f figures/fig2_pain_trajectory_across_arms.png
+          test -f figures/fig3_optimization_tradeoff.png
+          test -f figures/fig5_ablation_composite_score.png
+          test -f figures/fig7_robustness_curves.png
+          test -f figures/fig8_tornado_sensitivity.png
+          python - <<'PY'
+          import pandas as pd
+          doe = pd.read_csv('data/doe_runs.csv')
+          assert len(doe) == 1296, f'Expected 1296 DOE rows, found {len(doe)}'
+          print('Reproducibility check passed.')
+          PY

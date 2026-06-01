@@ -1,0 +1,10 @@
+name: bio-bandage-reproducibility
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - matplotlib
+  - nbformat
+  - pip

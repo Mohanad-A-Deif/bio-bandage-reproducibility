@@ -1,0 +1,38 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build/distribution
+build/
+dist/
+*.egg-info/
+
+# Temporary logs
+*.log
+
+# Local scratch outputs
+scratch/
+tmp/
+
+# Keep generated research assets tracked intentionally
+!data/*.csv
+!figures/*.png
