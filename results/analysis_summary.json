@@ -1,0 +1,27 @@
+{
+ "B_ref": 1.3403335230906208,
+ "max_Tskin_drop": 0.25526270076666613,
+ "eps_star": 0.5,
+ "J_best": 0.055704218577225365,
+ "delta_J": 0.02,
+ "selected": "D2",
+ "doe_total": 3888,
+ "doe_feasible": 3699,
+ "pareto3": 18,
+ "pareto2": 2,
+ "doe_feasible_by_medium": {
+  "PCM-A": 1296,
+  "PCM-B": 1296,
+  "Ice": 1107
+ },
+ "doe_infeasible_by_medium": {
+  "Ice": 189
+ },
+ "rank_weight_dirichlet_top_freq": {
+  "D1": 0.051,
+  "D2": 0.949,
+  "D3": 0.0,
+  "D4": 0.0,
+  "D5": 0.0
+ }
+}

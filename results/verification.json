@@ -1,0 +1,18 @@
+{
+ "steady_skin_T_fem": 30.18262461852452,
+ "steady_skin_T_analytic": 30.182632573116905,
+ "steady_abs_err_C": 7.954592383896397e-06,
+ "qs_flux_fem": 1.5377542451212747e-08,
+ "qs_flux_series": 1.5125632641465728e-08,
+ "qs_flux_rel_err": 0.01665449741628842,
+ "mass_balance_rel_err": 8.541497365475992e-05,
+ "residual_depot_frac_of_daily_dose": 9.663183592545586e-22,
+ "mesh_err_Ts_min": 0.0015897328652201281,
+ "dt_err_Ts_min": 0.00997244019860588,
+ "mesh_err_Tmu_min": 0.06174180596768508,
+ "dt_err_Tmu_min": 0.010464063777753552,
+ "mesh_err_M14": 0.0001192328974078972,
+ "dt_err_M14": 0.002038246442279198,
+ "mesh_err_J": 0.00030763871547218144,
+ "dt_err_J": 0.00012820885189923948
+}
