@@ -1,9 +1,0 @@
-parameter,symbol,planning_range,unit
-Initial reservoir concentration,C0,5--20,mg/mL
-Reservoir diffusivity at Tref,D_res_ref,1e-10--1e-9,m2/s
-Membrane diffusivity at Tref,D_mem_ref,1e-12--1e-10,m2/s
-Skin-barrier diffusivity at Tref,D_skin_ref,1e-13--1e-11,m2/s
-Layer-specific activation energy,E_D,10--40,kJ/mol
-Partition coefficient reservoir to membrane,K_res_to_mem,0.2--2,dimensionless
-Partition coefficient membrane to skin,K_mem_to_skin,0.05--1,dimensionless
-Effective clearance coefficient,k_clr,1e-7--1e-5,m/s

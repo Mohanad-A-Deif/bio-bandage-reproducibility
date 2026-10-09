@@ -1,5 +1,0 @@
-scenario_id,scenario,time_to_response_days,response_reduction_day14_pct,rom_day14_pct,strength_day14_pct,skin_safety_10
-A1,Full coupled model,5.8,71,88,84,8.9
-A2,Cooling + compression,7.1,58,79,74,8.7
-A3,Drug + compression,7.8,54,75,72,8.5
-A4,Baseline contact model,10.2,31,61,57,8.3

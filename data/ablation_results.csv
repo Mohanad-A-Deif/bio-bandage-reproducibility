@@ -1,6 +1,0 @@
-configuration,response_reduction_day14_pct,peak_temp_dev_C,dose_mg_cm2,rom_surrogate_pct,score
-Full coupled design,72.9,0.61,1.11,86,0.905
-No thermal coupling,61.8,0.24,0.89,77,0.792
-No membrane regulation,66.5,0.96,1.42,80,0.781
-No compression/contact coupling,64.1,0.63,1.09,74,0.768
-Drug-only transport baseline,57.4,0.18,0.83,71,0.702

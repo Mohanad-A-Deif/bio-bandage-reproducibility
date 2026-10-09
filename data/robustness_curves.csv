@@ -1,7 +1,0 @@
-perturbation_type,perturbation_pct,score
-contact_efficiency,0,0.905
-contact_efficiency,-10,0.878
-contact_efficiency,-20,0.842
-membrane_permeability,-10,0.867
-membrane_permeability,0,0.905
-membrane_permeability,10,0.884

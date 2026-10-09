@@ -1,7 +1,0 @@
-layer,symbol,baseline,lower_bound,upper_bound,unit
-Cooling source (PCM/ice),L_cool,4.0,2.0,8.0,mm
-Thermoplastic/seal,L_shell,1.0,0.5,2.0,mm
-Thermal interface hydrogel,L_gel,1.0,0.5,3.0,mm
-Diclofenac reservoir hydrogel,L_res,1.0,0.5,3.0,mm
-Rate-controlling membrane,L_mem,0.1,0.05,0.3,mm
-Skin-contact wicking liner,L_liner,1.0,0.5,2.0,mm

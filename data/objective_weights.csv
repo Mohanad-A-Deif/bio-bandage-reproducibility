@@ -1,6 +1,0 @@
-weight,value,associated_term,interpretation
-w_T,0.4,Phi_T_hat,temperature-window penalty
-w_C,0.32,Phi_C_hat,drug-concentration-window penalty
-w_p,0.1,(p/pmax)^2,compression-control effort
-w_u,0.13,(u/uref)^2,cooling-control effort
-w_L,0.05,sum(L_j/Lref)^2,layer-thickness regularization
