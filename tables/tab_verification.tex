@@ -1,0 +1,21 @@
+\begin{table}[!htbp]
+\centering
+\caption{Solver verification and numerical-convergence checks (nominal ice configuration).}
+\label{tab:identified_parameters}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{p{0.55\linewidth}p{0.40\linewidth}}
+\toprule
+Check & Result \\
+\midrule
+Steady multilayer conduction: $T_{\mathrm{skin}}$ FEM vs.\ series-resistance solution & 30.1826 vs.\ 30.1826 $^\circ$C (error 8.0e-06 $^\circ$C) \\
+Quasi-steady isothermal flux (12 h): FEM vs.\ series-resistance estimate & 1.538e-08 vs.\ 1.513e-08 kg\,m$^{-2}$\,s$^{-1}$ (1.7\%) \\
+Drug mass balance over 24 h ($\kappa=0$) & relative error 8.5e-05 \\
+Residual skin-barrier depot at 24 h / daily delivered mass & 9.7e-22 \\
+Mesh refinement ($\times1\to\times4$): $\min T_{\mathrm{skin}}$, $M_{14}$, $J$ & 0.002 $^\circ$C, 0.012\%, 0.031\% \\
+Mesh refinement: $\min T_{\mathrm{muscle}}$ (probe-node location) & 0.062 $^\circ$C \\
+Time-step refinement ($\times1\to\times\tfrac14$): $\min T_{\mathrm{skin}}$, $M_{14}$, $J$ & 0.010 $^\circ$C, 0.20\%, 0.013\% \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,21 @@
+\begin{table*}[!htbp]
+\centering
+\caption{Local objective-weight perturbation check: for each renormalised weight vector the full constrained multistart optimisation ($\varepsilon^\star$, ice) was repeated and the lexicographic selection rule applied. In all cases $L_{\mathrm{cool}}\approx8$~mm and $L_{\mathrm{mem}}=0.05$~mm.}
+\label{tab:weight_sensitivity}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lccccccccc}
+\toprule
+Weight case & $L_{\mathrm{gel}}$ & $L_{\mathrm{res}}$ & $C_0$ & $p$ & $\tau_{\mathrm{on}}$ & $t_{\mathrm{wear}}$ & $M_{14}$ & $\min T_{\mathrm{skin}}$ & $S_{\mathrm{rank}}$ \\
+\midrule
+Baseline & 1.55 & 0.50 & 20.0 & 10.0 & 15.0 & 7.00 & 0.531 & 10.50 & 0.787 \\
+Thermal-prioritized ($w_T$+10\%) & 1.55 & 0.50 & 20.0 & 10.0 & 15.0 & 7.00 & 0.531 & 10.50 & 0.787 \\
+Delivery-prioritized ($w_C$+10\%) & 1.55 & 0.50 & 20.0 & 10.0 & 15.0 & 7.00 & 0.531 & 10.50 & 0.787 \\
+Control-prioritized ($w_p,w_u$+10\%) & 1.55 & 0.50 & 20.0 & 10.0 & 15.0 & 7.00 & 0.531 & 10.50 & 0.787 \\
+Thickness-prioritized ($w_L$+10\%) & 1.55 & 0.50 & 20.0 & 10.0 & 15.0 & 7.00 & 0.531 & 10.50 & 0.787 \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}

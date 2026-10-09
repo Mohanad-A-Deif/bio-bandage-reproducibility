@@ -1,0 +1,20 @@
+\begin{table}[!htbp]
+\centering
+\caption{Computational scenarios evaluated with the geometry and protocol of the selected design. $R_B$ is computed relative to the fixed reference configuration $\theta_{\mathrm{ref}}$ (scenario A4 with the baseline geometry of Table~\ref{tab:layers_bounds}).}
+\label{tab:arm_outcomes}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lcccccccc}
+\toprule
+Scenario & $J$ & $R_B$ (\%) & $S_T$ (\%) & $S_C$ (\%) & $M_{14}$ (mg\,cm$^{-2}$) & $\min T_{\mathrm{skin}}$ ($^\circ$C) & $\min T_{\mathrm{muscle}}$ ($^\circ$C) & $S_{\mathrm{rank}}$ \\
+\midrule
+A1 full coupled & 0.056 & 89.3 & 64.6 & 87.1 & 0.531 & 10.50 & 33.25 & 0.787 \\
+A2 cooling + compression & 0.137 & 70.3 & 64.6 & 0.0 & 0.000 & 10.50 & 33.25 & 0.272 \\
+A3 drug + compression & 0.399 & 28.7 & 0.0 & 93.4 & 0.723 & 34.09 & 36.63 & -0.090 \\
+A4 baseline contact & 0.486 & 8.4 & 0.0 & 0.0 & 0.000 & 34.09 & 36.63 & -0.552 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

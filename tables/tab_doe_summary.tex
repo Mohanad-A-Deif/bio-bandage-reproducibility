@@ -1,0 +1,19 @@
+\begin{table}[!htbp]
+\centering
+\caption{Summary of the full-factorial DOE ($3^4\times4^2=1296$ runs per cooling medium, 3888 forward solves in total).}
+\label{tab:doe_summary}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lcccccccc}
+\toprule
+Medium & Runs & Admissible & $\min T_{\mathrm{skin}}$ range ($^\circ$C) &  & max $S_T$ (\%) & max $R_B$ (\%) & max $S_{\mathrm{rank}}$ & median $S_{\mathrm{rank}}$ \\
+\midrule
+Ice & 1296 & 1107 & 8.37 & 19.69 & 70.0 & 89.2 & 0.775 & 0.441 \\
+PCM-A & 1296 & 1296 & 17.70 & 25.77 & 0.0 & 80.0 & 0.463 & 0.228 \\
+PCM-B & 1296 & 1296 & 16.31 & 25.54 & 0.0 & 79.3 & 0.488 & 0.246 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
