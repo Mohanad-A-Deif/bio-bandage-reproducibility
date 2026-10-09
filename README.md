@@ -1,30 +1,31 @@
-# Bio Bandage reproducible synthetic dataset
+# bio-bandage-reproducibility — release v2.0.0
 
-This folder contains the reconstructed computational dataset used to reproduce the manuscript tables and figures.
+Finite-element solver, simulation data and analysis scripts for the manuscript
+*"Coupled Cooling, Diclofenac Transport and Compression–Contact Modelling for the In Silico Design of a
+Multilayer Cryo-Compression Bandage"* (revision R1, SAJCE-D-26-00510).
 
-## Critical interpretation
-The manuscript states that the work is entirely in silico. The uploaded notebook contained plotting code with synthetic/hard-coded arrays, not the full raw FEM/PDE solver output. Therefore, these CSV files are a transparent reconstructed synthetic dataset aligned with the manuscript and the plotting notebook. They are not clinical, animal, ex-vivo, or bench-top measurements.
+## What this release contains
 
-## Main files
-- `benchmark_parameters.csv`: nominal synthetic benchmark values and self-consistency metrics.
-- `permeation_temperature_points.csv`: synthetic reference points used in Fig. 1.
-- `permeation_temperature_curves.csv`: smooth model curves used in Fig. 1.
-- `arm_outcomes.csv`: scenario-comparison table.
-- `arm_trajectories.csv`: normalized burden trajectories for Fig. 2.
-- `optimization_candidate_pool.csv`: candidate pool and top designs for Fig. 3.
-- `optimized_designs.csv`: top optimization-derived designs.
-- `ablation_results.csv`: mechanism-ablation table and Fig. 5 values.
-- `pareto_front_designs.csv`: representative DOE/Pareto designs.
-- `robustness_results.csv` and `robustness_curves.csv`: robustness table and Fig. 7 values.
-- `sensitivity_summary.csv` and `sensitivity_tornado.csv`: sensitivity table and Fig. 8 values.
-- `doe_runs.csv`: 1296-run synthetic DOE grid following the manuscript factor levels.
-- `baseline_forward_timeseries.csv`: synthetic 24-h forward-model time series for C1.
+| Folder | Content |
+|---|---|
+| `src/bandage_fem.py` | 1D linear finite-element solver: Pennes bioheat, enthalpy-form apparent-heat-capacity phase change (raised-cosine kernel), pressure-dependent contact resistance, layer-specific Arrhenius diclofenac diffusion, partitioning, contact-limited transfer. Backward Euler + Newton, tridiagonal solves (Numba). |
+| `src/study.py` | Penalties, objective `J`, burden `B`, `R_B`, `S_T`, `S_C`, `ΔT_peak`, `S_rank`, scenarios A1–A4. |
+| `src/verify.py` | Analytical steady-state check, quasi-steady flux check, mass balance, mesh and time-step refinement. |
+| `src/doe.py` | Full-factorial DOE: **all 3 × 1296 = 3888 runs** (Ice, PCM-A, PCM-B). |
+| `src/optimize_designs.py` | Multistart bounded Powell optimisation with the hard skin constraint and margin ε. |
+| `src/analysis.py`, `weights.py` | ε-margin sizing, lexicographic selection, scenarios, ablation, robustness, sensitivity, Pareto extraction, weight checks. |
+| `src/figures.py`, `fig_permeation.py`, `graphical_abstract.py`, `make_tables.py` | Every figure and every LaTeX table of the manuscript, written directly from the result files. |
+| `results/` | All outputs: `doe_runs.csv` (3888 runs), `doe_feasible_pareto.csv` (Pareto flags), `optimization_runs*.csv` (every start, start point, evaluations), verification, scenario, ablation, robustness, sensitivity and weight files. |
 
-## Recreate everything
-From the package root, run:
+## Reproduce
 
 ```bash
-python src/bio_bandage_reproducible_study.py --all
+pip install -r requirements.txt
+python run_all.py
 ```
 
-Figures will be written to `figures/` and CSV files to `data/`.
+## Scope
+
+Release v2.0.0 supersedes v1.0.0, which contained the plotting scripts only. Every number in revision R1
+is produced by the code in `src/`. All results are in silico model predictions; no clinical,
+animal, ex vivo or bench-top data are involved.
